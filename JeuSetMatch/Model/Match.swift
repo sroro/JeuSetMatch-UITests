@@ -36,10 +36,8 @@ class Match {
 
     // MARK: - Private Getters
     private func getWinner() -> Player? {
-        for (player, score) in scores {
-            if score == Match.maxNumberOfWonSets {
+        for (player, score) in scores where score == Match.maxNumberOfWonSets {
                 return player
-            }
         }
         return nil
     }

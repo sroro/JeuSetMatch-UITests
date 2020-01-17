@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         match = Match()
         updateUI()
     }
-
+    
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     }
 
     private func updateAllSetsScore(forPlayer player: Player) {
-        for i in 0..<6 {
+        for i in 0..<5 {
             if i < match.sets.count {
                 let set = match.sets[i]
                 playerSetScoreLabels[player]![i].text = "\(set.scores[player]!)"
@@ -113,4 +113,3 @@ class ViewController: UIViewController {
         infoLabel.text = "Qui a gagné le point ?"
     }
 }
-
